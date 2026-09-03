@@ -1,0 +1,18 @@
+# Environment — never commit real secrets
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+
+# Uploaded user files — not source code
+uploads/*
+!uploads/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dev utilities
+diagnostic_api_test.js

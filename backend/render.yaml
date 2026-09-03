@@ -1,0 +1,25 @@
+# Render.com deployment config for the backend API
+# https://render.com/docs/render-yaml-spec
+
+services:
+  - type: web
+    name: ai-interview-portal-api
+    runtime: node
+    region: oregon
+    plan: free
+    rootDir: .
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false          # Set manually in Render dashboard
+      - key: JWT_SECRET
+        sync: false          # Set manually in Render dashboard
+      - key: GEMINI_API_KEY
+        sync: false          # Set manually in Render dashboard
+      - key: ALLOWED_ORIGIN
+        sync: false          # Set to your frontend URL, e.g. https://your-app.vercel.app

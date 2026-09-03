@@ -1,0 +1,11 @@
+{
+  "name": "ai-mock-interview-portal",
+  "version": "1.0.0",
+  "description": "AI Mock Interview Portal - MERN Stack Application",
+  "scripts": {
+    "start:backend": "cd backend && node server.js",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev -- --host localhost",
+    "build:frontend": "cd frontend && npm run build"
+  }
+}
